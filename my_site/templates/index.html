@@ -1,0 +1,119 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+     <div class="navbar-header">
+       <a class="navbar-brand" href="#">SS</a>
+     </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Activities</a></li>
+        <li><a href="#">Skills</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+       <li><a href="#"><span class="glyphicon glyphicon-user"></span>Hello, Name Surname</a></li>
+       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="s-stepper">
+	<div data-target="#stage1" id="stage-1-step" class="s-step active">
+		<span class="s-step-counter"></span>
+		<small>Engineering Management</small>
+	</div>
+	<div data-target="#stage2" id="stage-2-step" class="s-step">
+		<span class="s-step-counter"></span>
+		<small>Requirements</small>
+	</div>
+	<div data-target="#stage3" id="stage-3-step" class="s-step">
+		<span class="s-step-counter"></span>
+		<small>information about Payment</small>
+	</div>
+	<div data-target="#stage4" id="stage-4-step" class="s-step">
+		<span class="s-step-counter"></span>
+		<small>Required skills for the job</small>
+	</div>
+    <div data-target="#stage4" id="stage-5-step" class="s-step">
+		<span class="s-step-counter"></span>
+		<small>Required skills for the job</small>
+	</div>
+    <div data-target="#stage4" id="stage-6-step" class="s-step">
+		<span class="s-step-counter"></span>
+		<small>Required skills for the job</small>
+	</div>
+    <div data-target="#stage4" id="stage-7-step" class="s-step">
+		<span class="s-step-counter"></span>
+		<small>Required skills for the job</small>
+	</div>
+    <div data-target="#stage4" id="stage-8-step" class="s-step">
+		<span class="s-step-counter"></span>
+		<small>Required skills for the job</small>
+	</div>
+    <div data-target="#stage4" id="stage-9-step" class="s-step">
+		<span class="s-step-counter"></span>
+		<small>Required skills for the job</small>
+	</div>
+    <div data-target="#stage4" id="stage-10-step" class="s-step">
+		<span class="s-step-counter"></span>
+		<small>Required skills for the job</small>
+	</div>
+</div>
+<div class="s-stepper-content">
+	<div id="stage1" class="s-stepper-stage active">
+		<div>
+			<h1>Python</h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div style="float: right">
+			<button onclick="hideStage(1);showStage(2)" style="">Next <i class="fa fa-right"></i></button>
+		</div>
+	</div>
+	<div id="stage2" class="s-stepper-stage">
+		<h1>Stage 2</h1>
+				<div style="float: right">
+					<button onclick="hideStage(2);showStage(1)" style=""><i class="fa fa-left"></i> Previous</button>
+			<button onclick="hideStage(2);showStage(3)" style="">Next <i class="fa fa-right"></i></button>
+		</div>
+	</div>
+	<div id="stage3" class="s-stepper-stage">
+		<h1>Stage 3</h1>
+				<div style="float: right">
+					<button onclick="hideStage(3);showStage(2)" style=""><i class="fa fa-left"></i> Previous</button>
+			<button onclick="hideStage(3);showStage(4)" style="">Next <i class="fa fa-right"></i></button>
+		</div>
+	</div>
+	<div id="stage4" class="s-stepper-stage">
+		<h1>Stage 4</h1>
+				<div style="float: right">
+			<button style="">Done</button>
+		</div>
+	</div>
+</div>
+
+
+  <button id=b1 type="submit" class='btn btn-primary btn'>Skip</button>
+  <button id=b2 type="button" class="btn btn-success">Accept</button>
+  <div class="footer">
+    <p>SS.2019</p>
+  </div>
+</body>
+</html>

@@ -16,10 +16,3 @@ if __name__ == '__main__':
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
-
-class Post(models.Model):
-    title = models.CharField(max_length=255)
-    slug = models.SlugField(unique=True, max_length=255)
-    content = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    author = models.TextField()

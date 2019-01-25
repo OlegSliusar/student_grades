@@ -1,13 +1,13 @@
 from django.db import models
-from django.template.defaultfilters import slugify
-from django.contrib.auth.models import User
 
+class Users:
+    class Meta:
+        db_table = "Users"
 
-class User(models.Model):
-    name = models.CharField(max_length=35)
-    surname = models.CharField(max_length=35)
-    role = models.ForeignKey('Role')
-    department = models.ForeignKey('Department')
+        Name = models.CharField(max_length=60, default=None)
+        Surname = models.CharField(max_length=60, default=None)
+        fRole = models.ForeignKey('RolesModel', on_delete=models.DO_NOTHING)
+        Department = models.ManyToManyField('DepartmentsModel')
 
 class Role(models.Model):
     name = models.CharField(max_length=35)
@@ -18,5 +18,5 @@ class Grade(models.Model):
 class Department(models.Model):
     name = models.CharField(max_length=35)
 
-class Permissions(model.Model):
+class Permissions(models.Model):
     code_name = models.CharField(max_length=35)

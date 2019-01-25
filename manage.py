@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 import os
 import sys
-from django.db import models
-from django.template.defaultfilters import slugify
-from django.contrib.auth.models import User
+
 
 if __name__ == '__main__':
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'student_grades.settings')

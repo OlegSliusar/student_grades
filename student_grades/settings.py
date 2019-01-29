@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'student_grades.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'users',
+        'NAME': 'users_1',
         'USER': 'postgres',
         'PASSWORD': 'root',
         'HOST': 'localhost',

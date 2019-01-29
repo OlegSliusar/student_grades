@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.db import models
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 
 class Role(models.Model):
@@ -38,7 +38,7 @@ class Answer(models.Model):
     class Meta:
         db_table = "answer"
 
-    fUser = models.ForeignKey("users.User", default=None, on_delete=models.CASCADE)
+    # fUser = models.ForeignKey("users.User", default=None, on_delete=models.CASCADE)
 
     fQuestion = models.ForeignKey("Question", on_delete=models.DO_NOTHING)
     answer_like = models.BooleanField()
@@ -56,4 +56,4 @@ class ExpertReview(models.Model):
     fAnswer = models.ForeignKey("Answer", on_delete=models.DO_NOTHING)
     fGrade = models.ForeignKey("Grade", on_delete=models.DO_NOTHING)
     comment = models.TextField()
-    fUserExpert = models.ForeignKey("users.User", on_delete=models.CASCADE)
+    # fUserExpert = models.ForeignKey("users.User", on_delete=models.CASCADE)

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'my_site',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -125,4 +126,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
-# AUTH_USER_MODEL = repr(users.CustomUser)
+# AUTH_USER_MODEL = 'users.CustomUser'

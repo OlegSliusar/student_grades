@@ -1,15 +1,7 @@
 from django.conf import settings
 from django.db import models
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 
-
-class User(models.Model):
-    class Meta:
-        db_table = "user"
-
-    name = models.CharField(max_length=60, default=None)
-    surname = models.CharField(max_length=60, default=None)
-    fRole = models.ForeignKey('Role', on_delete=models.DO_NOTHING)
 
 class Role(models.Model):
     class Meta:
@@ -46,11 +38,10 @@ class Answer(models.Model):
     class Meta:
         db_table = "answer"
 
-    fUser = models.ForeignKey("User", default=None, on_delete=models.CASCADE)
+    fUser = models.ForeignKey("users.User", default=None, on_delete=models.CASCADE)
 
     fQuestion = models.ForeignKey("Question", on_delete=models.DO_NOTHING)
     answer_like = models.BooleanField()
-    # fExpert = models.ForeignKey("User", on_delete=models.CASCADE, related_name='fExpert')
     fGrade = models.ForeignKey('Grade', on_delete=models.DO_NOTHING)
 
 class Question(models.Model):
@@ -59,3 +50,10 @@ class Question(models.Model):
     title = models.CharField(max_length=35)
     fStep = models.ForeignKey("Step", on_delete=models.DO_NOTHING)
 
+class ExpertReview(models.Model):
+    class Meta:
+        db_table = "expert_review"
+    fAnswer = models.ForeignKey("Answer", on_delete=models.DO_NOTHING)
+    fGrade = models.ForeignKey("Grade", on_delete=models.DO_NOTHING)
+    comment = models.TextField()
+    fUserExpert = models.ForeignKey("users.User", on_delete=models.CASCADE)

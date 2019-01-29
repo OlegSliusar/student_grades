@@ -38,7 +38,7 @@ class Answer(models.Model):
     class Meta:
         db_table = "answer"
 
-    # fUser = models.ForeignKey("users.User", default=None, on_delete=models.CASCADE)
+    fUser = models.ForeignKey("users.User", default=None, on_delete=models.CASCADE)
 
     fQuestion = models.ForeignKey("Question", on_delete=models.DO_NOTHING)
     answer_like = models.BooleanField()

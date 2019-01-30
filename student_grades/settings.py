@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'allactions',
     'my_site',
+    'roleaccess',
     'users',
     'answers',
 ]

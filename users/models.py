@@ -7,4 +7,4 @@ class User(models.Model):
 
     name = models.CharField(max_length=60, default=None)
     surname = models.CharField(max_length=60, default=None)
-    fRole = models.ForeignKey('my_site.Role', default=None, on_delete=models.CASCADE)
+    # fRole = models.ForeignKey('roleaccess.Role', default=None, on_delete=models.CASCADE)

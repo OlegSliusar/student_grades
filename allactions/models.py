@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class Department(models.Model):
+    class Meta:
+        db_table = "department"
+    name = models.CharField(max_length=35)

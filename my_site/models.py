@@ -13,11 +13,6 @@ class Grade(models.Model):
         db_table = "grade"
     name = models.CharField(max_length=35)
 
-class Department(models.Model):
-    class Meta:
-        db_table = "department"
-    name = models.CharField(max_length=35)
-
 class Permission(models.Model):
     class Meta:
         db_table = "permission"

@@ -7,7 +7,7 @@ class Answer(models.Model):
 
     fUser = models.ForeignKey("users.User", default=None, on_delete=models.CASCADE)
 
-    fQuestion = models.ForeignKey("my_site.Question", on_delete=models.DO_NOTHING)
+    fQuestion = models.ForeignKey("allactions.Question", default=None, on_delete=models.DO_NOTHING)
     answer_like = models.BooleanField()
     fGrade = models.ForeignKey('my_site.Grade', on_delete=models.DO_NOTHING)
 
@@ -18,4 +18,3 @@ class Review(models.Model):
     fGrade = models.ForeignKey("my_site.Grade", on_delete=models.DO_NOTHING)
     comment = models.TextField()
     fUserExpert = models.ForeignKey("users.User", default=None, on_delete=models.CASCADE)
-

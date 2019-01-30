@@ -4,3 +4,14 @@ class Department(models.Model):
     class Meta:
         db_table = "department"
     name = models.CharField(max_length=35)
+
+class Section(models.Model):
+    class Meta:
+        db_table = "section"
+    name = models.CharField(max_length=35)
+
+class Question(models.Model):
+    class Meta:
+        db_table = "question"
+    title = models.CharField(max_length=35)
+    fStep = models.ForeignKey("my_site.Step", on_delete=models.DO_NOTHING)

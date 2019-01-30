@@ -22,15 +22,4 @@ class Step(models.Model):
     class Meta:
         db_table = "step"
     title = models.CharField(max_length=35)
-    fSection = models.ForeignKey('Section', on_delete=models.DO_NOTHING)
-
-class Section(models.Model):
-    class Meta:
-        db_table = "section"
-    name = models.CharField(max_length=35)
-
-class Question(models.Model):
-    class Meta:
-        db_table = "question"
-    title = models.CharField(max_length=35)
-    fStep = models.ForeignKey("Step", on_delete=models.DO_NOTHING)
+    fSection = models.ForeignKey('allactions.Section', default=None, on_delete=models.DO_NOTHING)

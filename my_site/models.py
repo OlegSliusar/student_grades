@@ -50,10 +50,10 @@ class Question(models.Model):
     title = models.CharField(max_length=35)
     fStep = models.ForeignKey("Step", on_delete=models.DO_NOTHING)
 
-class ExpertReview(models.Model):
+class Review(models.Model):
     class Meta:
-        db_table = "expert_review"
+        db_table = "review"
     fAnswer = models.ForeignKey("Answer", on_delete=models.DO_NOTHING)
     fGrade = models.ForeignKey("Grade", on_delete=models.DO_NOTHING)
     comment = models.TextField()
-    # fUserExpert = models.ForeignKey("users.User", on_delete=models.CASCADE)
+    fUserExpert = models.ForeignKey("users.User", default=None, on_delete=models.CASCADE)

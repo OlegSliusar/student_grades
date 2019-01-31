@@ -4,8 +4,8 @@ from django.db import models
 
 
 
-class Step(models.Model):
+class Stage(models.Model):
     class Meta:
-        db_table = "step"
+        db_table = "stage"
     title = models.CharField(max_length=35)
     fSection = models.ForeignKey('allactions.Section', default=None, on_delete=models.DO_NOTHING)

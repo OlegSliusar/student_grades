@@ -9,12 +9,12 @@ class Answer(models.Model):
 
     fQuestion = models.ForeignKey("allactions.Question", default=None, on_delete=models.DO_NOTHING)
     answer_like = models.BooleanField()
-    # fGrade = models.ForeignKey('my_site.Grade', on_delete=models.DO_NOTHING)
+    fGrade = models.ForeignKey('allactions.Grade', default=None, on_delete=models.DO_NOTHING)
 
 class Review(models.Model):
     class Meta:
         db_table = "review"
     fAnswer = models.ForeignKey("Answer", on_delete=models.DO_NOTHING)
-    # fGrade = models.ForeignKey("my_site.Grade", on_delete=models.DO_NOTHING)
+    fGrade = models.ForeignKey("allactions.Grade", default=None, on_delete=models.DO_NOTHING)
     comment = models.TextField()
     fUserExpert = models.ForeignKey("users.User", default=None, on_delete=models.CASCADE)

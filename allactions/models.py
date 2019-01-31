@@ -14,9 +14,16 @@ class Question(models.Model):
     class Meta:
         db_table = "question"
     title = models.CharField(max_length=35)
-    # fStep = models.ForeignKey("my_site.Stage", default=None, on_delete=models.DO_NOTHING)
+    fStep = models.ForeignKey("Stage", default=None, on_delete=models.DO_NOTHING)
 
 class Grade(models.Model):
     class Meta:
         db_table = "grade"
     name = models.CharField(max_length=35)
+
+
+class Stage(models.Model):
+    class Meta:
+        db_table = "stage"
+    title = models.CharField(max_length=35)
+    fSection = models.ForeignKey('Section', default=None, on_delete=models.DO_NOTHING)

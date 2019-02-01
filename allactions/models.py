@@ -14,7 +14,8 @@ class Question(models.Model):
     class Meta:
         db_table = "question"
     title = models.CharField(max_length=35)
-    fStep = models.ForeignKey("Stage", default=None, on_delete=models.DO_NOTHING)
+    fStage = models.ForeignKey("Stage", default=None, on_delete=models.DO_NOTHING)
+    department = models.ManyToManyField(Department)
     hint = models.TextField(default=None)
 
 class Grade(models.Model):

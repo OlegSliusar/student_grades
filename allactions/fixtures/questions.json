@@ -1,0 +1,52 @@
+[
+{
+  "model": "allactions.question",
+  "pk": 1,
+  "fields": {
+    "title": "Process planning (SDLC)",
+    "fStage": 1,
+    "hint": "Understanding of common software development life cycle models (Waterfall, Agile), Scrum concepts and process, pros and cons of tools, technics and approaches used in a development process.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 2,
+  "fields": {
+    "title": "Estimation",
+    "fStage": 1,
+    "hint": "Terminology understanding, using simple and advanced estimations techniques: Scope, Estimates/Targets/Commitments, Overestimate vs Underestimate, Analogy and Story based estimates, methods: Delphi, PERT, COCOMO II etc.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 3,
+  "fields": {
+    "title": "Software requirements engineering",
+    "fStage": 2,
+    "hint": "Sources of Requirements, Software Requirements Specifications, Requirements Elicitation Techniques (Brainstorming, Interviews, Survey/Questionnaire, Document Analysis), Functional vs Non-Functional requirements.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 4,
+  "fields": {
+    "title": "OOD",
+    "fStage": 3,
+    "hint": "An ability to use effectively fundamental OOP knowledge, microarchitectural design patterns (as 3 major groups of GoF design patterns like creational, structural and behavioral) and major macroachitectural patterns (MVC, Layered Architecture, IoC, etc), SOLID principles.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 5,
+  "fields": {
+    "title": "DB design",
+    "fStage": 3,
+    "hint": "Relational data concepts understanding (Entity-Relationship, normalization, denormalization, transactions). Defining database structure that guarantee data integrity and relations integrity. Define security and structure based optimization. Design complex databases from scratch. Database engines, ACID.",
+    "department": []
+  }
+}
+]

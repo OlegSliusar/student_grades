@@ -54,5 +54,37 @@
     "title": "Configuration Management",
     "fSection": 1
   }
+},
+  {
+  "model": "allactions.stage",
+  "pk": 8,
+  "fields": {
+    "title": "Programming languages",
+    "fSection": 2
+  }
+},
+  {
+  "model": "allactions.stage",
+  "pk": 9,
+  "fields": {
+    "title": "Frameworks and libraries",
+    "fSection": 2
+  }
+},
+  {
+  "model": "allactions.stage",
+  "pk": 10,
+  "fields": {
+    "title": "Servers and databases",
+    "fSection": 2
+  }
+},
+  {
+  "model": "allactions.stage",
+  "pk": 11,
+  "fields": {
+    "title": "Methodologies and practices",
+    "fSection": 2
+  }
 }
 ]

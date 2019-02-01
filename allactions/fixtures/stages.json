@@ -1,0 +1,58 @@
+[
+{
+  "model": "allactions.stage",
+  "pk": 1,
+  "fields": {
+    "title": "Engineering Management",
+    "fSection": 1
+  }
+},
+{
+  "model": "allactions.stage",
+  "pk": 2,
+  "fields": {
+    "title": "Requirements",
+    "fSection": 1
+  }
+},
+{
+  "model": "allactions.stage",
+  "pk": 3,
+  "fields": {
+    "title": "Design",
+    "fSection": 1
+  }
+},
+  {
+  "model": "allactions.stage",
+  "pk": 4,
+  "fields": {
+    "title": "Construction",
+    "fSection": 1
+  }
+},
+  {
+  "model": "allactions.stage",
+  "pk": 5,
+  "fields": {
+    "title": "DB",
+    "fSection": 1
+  }
+},
+  {
+  "model": "allactions.stage",
+  "pk": 6,
+  "fields": {
+    "title": "Verification",
+    "fSection": 1
+  }
+},
+  {
+  "model": "allactions.stage",
+  "pk": 7,
+  "fields": {
+    "title": "Configuration Management",
+    "fSection": 1
+  }
+}
+]

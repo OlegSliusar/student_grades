@@ -1,0 +1,30 @@
+[
+{
+  "model": "allactions.grade",
+  "pk": 1,
+  "fields": {
+    "name": "None"
+  }
+},
+  {
+  "model": "allactions.grade",
+  "pk": 2,
+  "fields": {
+    "name": "Beginner"
+  }
+},
+  {
+  "model": "allactions.grade",
+  "pk": 3,
+  "fields": {
+    "name": "Good"
+  }
+},
+  {
+  "model": "allactions.grade",
+  "pk": 4,
+  "fields": {
+    "name": "Strong"
+  }
+}
+]

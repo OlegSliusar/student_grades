@@ -1,0 +1,16 @@
+[
+  {
+  "model": "allactions.section",
+  "pk": 1,
+  "fields": {
+    "name": "Activities"
+  }
+},
+  {
+  "model": "allactions.section",
+  "pk": 2,
+  "fields": {
+    "name": "Skills"
+  }
+}
+]

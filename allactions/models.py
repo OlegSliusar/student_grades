@@ -16,7 +16,7 @@ class Question(models.Model):
     title = models.CharField(max_length=35)
     fStage = models.ForeignKey("Stage", default=None, on_delete=models.DO_NOTHING)
     department = models.ManyToManyField(Department)
-    hint = models.TextField(default=None)
+    hint = models.TextField(max_length=300, null=True, blank=True, default=None)
 
 class Grade(models.Model):
     class Meta:

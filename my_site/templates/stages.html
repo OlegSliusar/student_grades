@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+
+      <div class="stepper">
+        <ul class="nav nav-tabs" role="tablist">
+            {% for stage in stages %}
+              <li role="presentation" class="active">
+                <a class="persistant-disabled" href="#stepper-step-1" data-toggle="tab" aria-controls="stepper-step-1" role="tab" title="Step 1">
+
+
+                    <span class="round-tab">{{ stage.title }}</span>
+
+                </a>
+              </li>
+            {% endfor %}
+        </ul>
+      </div>
+
+    {% include 'questions.html' %}
+    </div>
+  </div>
+</div>
+

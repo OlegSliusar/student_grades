@@ -48,5 +48,155 @@
     "hint": "Relational data concepts understanding (Entity-Relationship, normalization, denormalization, transactions). Defining database structure that guarantee data integrity and relations integrity. Define security and structure based optimization. Design complex databases from scratch. Database engines, ACID.",
     "department": []
   }
+},
+{
+  "model": "allactions.question",
+  "pk": 6,
+  "fields": {
+    "title": "Modeling",
+    "fStage": 3,
+    "hint": "UML diagrams: structure, behavior and interaction.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 7,
+  "fields": {
+    "title": "Programming language",
+    "fStage": 4,
+    "hint": "Language fundamentals, basic constructions, standard language library, tasks",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 8,
+  "fields": {
+    "title": "Refactoring",
+    "fStage": 4,
+    "hint": "Refactoring techniques, \u201ccode smells\u201d detecting, refactoring and patterns.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 9,
+  "fields": {
+    "title": "Concurrency",
+    "fStage": 4,
+    "hint": "Concurrency and thread management, synchronization methods (locks, re-entrant locks, semaphores, events, shared memory, message queues). Python\u2019s GIL, threading, multiprocessing. Deadlock problem, Thread Pool, Producer-Consumer model, Greenlets, microthreads, coroutines.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 10,
+  "fields": {
+    "title": "Distributed objects and components",
+    "fStage": 4,
+    "hint": "XML-RPC, REST, SOAP, WSDL.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 11,
+  "fields": {
+    "title": "Networking",
+    "fStage": 4,
+    "hint": "OSI model, understanding layers and protocols, TCP/IP. SSH, Telnet, rdesktop, VNC. Python\u2019s socket module. TCP vs UDP, SSL/TLS.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 12,
+  "fields": {
+    "title": "Web UI",
+    "fStage": 4,
+    "hint": "HTML elements and CSS styling, DOM. JavaScript: variables, data type, operators and constructions, event handling. HTML 5.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 13,
+  "fields": {
+    "title": "Web server applications",
+    "fStage": 4,
+    "hint": "Frameworks: Django, Flask, Bottle, web2py, Pyramid. Templating engines: Jinja2, Django template system, Cheetah. Web servers: mod_wsgi, uWSGI, Tornado, nginx, Apache. Content management Systems: Pinax, Plone, Silva, PyLucid.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 14,
+  "fields": {
+    "title": "SQL",
+    "fStage": 5,
+    "hint": "SQL data types, operators, functions. Data manipulation: insert, update, select, delete. Joins, unions, aggregations, permission management.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 15,
+  "fields": {
+    "title": "DB access",
+    "fStage": 5,
+    "hint": "Python DB-API 2.0, connection and cursor objects. Concepts: CRUD, transaction, index, trigger, view, stored procedure. ODBC, ORM concepts, SQLAlchemy, MySQLdb. NoSQL (MongoDB, Redis).",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 16,
+  "fields": {
+    "title": "Code quality",
+    "fStage": 6,
+    "hint": "Python Style Guide, Code review theory and toolset, static code analysis tools, metrics.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 17,
+  "fields": {
+    "title": "Automated testing",
+    "fStage": 6,
+    "hint": "Unit test framework including managing test suites, organizing and building tests, applying mocking techniques to test design, evaluating code coverage. Python\u2019s unittest, doctest. Testing of WebUI, GUI.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 18,
+  "fields": {
+    "title": "Security",
+    "fStage": 6,
+    "hint": "Understanding of security concepts, security threats types and prevention techniques, cryptography concepts. HTTP vs HTTPS, authentication and authorization, password security.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 19,
+  "fields": {
+    "title": "Product builds and continuous integ",
+    "fStage": 7,
+    "hint": "Automated build concept, building tools (make, ant, rake, etc). Continuous Integration concept, best practices and frameworks.",
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 20,
+  "fields": {
+    "title": "Managing versions",
+    "fStage": 7,
+    "hint": "Version Control Systems understanding: Git, Perforce, SVN, CVS, Mercurial etc.",
+    "department": []
+  }
 }
 ]

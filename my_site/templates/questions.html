@@ -1,7 +1,8 @@
 <form role="form" action="/id/" method="post">
   <div class="tab-content">
+    {% for question in questions %}
     <div class="tab-pane fade in active" role="tabpanel" id="stepper-step-1">
-      <h3 class="h2">{{questions.first.id}}. {{questions.first.title}}</h3>
+      <h3 class="h3">{{question.id}}. {{question.title}}</h3>
       <p>Do you like to work with?</p>
       <br>
         <div class="radio-buttons">
@@ -20,38 +21,14 @@
           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">None
           <span class="caret"></span></button>
           <ul class="dropdown-menu">
+              <li><a href="#"><None></None></a></li>
+              <li><a href="#">Beginner</a></li>
               <li><a href="#">Good</a></li>
-              <li><a href="#">Intemidiate</a></li>
               <li><a href="#">Strong</a></li>
           </ul>
-
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown button
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
         </div>
-      <br>
-        <ul class="list-inline pull-right">
-        <li>
-            <button type="button" class="btn btn-secondary">Skip</button>
-        </li>
-        <li>
-          <a class="btn btn-primary next-step">Next</a>
-        </li>
 
-      </ul>
     </div>
+    {% endfor %}
   </div>
 </form>
-
-<!--<form action="/your-name/" method="post">-->
-    <!--<label for="your_name">Your name: </label>-->
-    <!--<input id="your_name" type="text" name="your_name" value="{{ current_name }}">-->
-    <!--<input type="submit" value="OK">-->
-<!--</form>-->

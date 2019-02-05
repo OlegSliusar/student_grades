@@ -4,12 +4,18 @@
 
       <div class="stepper">
         <ul class="nav nav-tabs" role="tablist">
-            {% for stage in stages %}
-              <li role="presentation" class="active">
-                <a class="persistant-disabled" href="#stepper-step-1" data-toggle="tab" aria-controls="stepper-step-1" role="tab" title="Step 1">
+            {% for stage_li in stages %}
+
+              {% if stage_li == stage %}
+                <li role="presentation" class="active">
+                  {% else %}
+                <li role="presentation" class="disabled">
+              {% endif %}
+
+                <a href="{% url 'stage_page' id_stg=stage_li.id %}" data-toggle="tab" aria-controls="stepper-step-1" role="tab" title="{{ stage_li.title }}">
 
 
-                    <span class="round-tab">{{ stage.title }}</span>
+                  <span class="round-tab">{{ stage_li.title }}</span>
 
                 </a>
               </li>
@@ -21,4 +27,3 @@
     </div>
   </div>
 </div>
-

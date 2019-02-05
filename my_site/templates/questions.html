@@ -1,7 +1,7 @@
-<form role="form">
+<form role="form" action="/id/" method="post">
   <div class="tab-content">
     <div class="tab-pane fade in active" role="tabpanel" id="stepper-step-1">
-      <h3 class="h2">1. Python</h3>
+      <h3 class="h2">{{questions.first.id}}. {{questions.first.title}}</h3>
       <p>Do you like to work with?</p>
       <br>
         <div class="radio-buttons">
@@ -49,3 +49,9 @@
     </div>
   </div>
 </form>
+
+<!--<form action="/your-name/" method="post">-->
+    <!--<label for="your_name">Your name: </label>-->
+    <!--<input id="your_name" type="text" name="your_name" value="{{ current_name }}">-->
+    <!--<input type="submit" value="OK">-->
+<!--</form>-->

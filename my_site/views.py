@@ -12,7 +12,7 @@ def base(request, id_stg):
     next_stage = Stage.objects.get(pk=id_stg+1)
     context = {'stages': stages, 'questions': questions, 'sections': sections, 'stage': stage, 'all_questions': all_questions, 'next_stage':next_stage }
     return render(request, 'base.html', context=context)
-#
+
 # def stage(request):
 #     stages = Stage.objects.all()
 #     return render(request)

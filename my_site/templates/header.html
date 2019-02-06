@@ -3,13 +3,20 @@
      <div class="navbar-header">
        <a class="navbar-brand" href="#">Demo SoftServe</a>
      </div>
+        {% if user.is_authenticated %}
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Activities</a></li>
         <li><a href="#">Skills</a></li>
       </ul>
+
+        {% endif %}
       <ul class="nav navbar-nav navbar-right">
-       <li><a href="#"><span class="glyphicon glyphicon-user"></span>Hello, User Surname</a></li>
-       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
+          {% if user.is_authenticated %}
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span>Hello, {{ user.username }}</a></li>
+            <li><a href="/accounts/logout/"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+          {% else %}
+            <li><a href="/accounts/login/"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+          {% endif %}
       </ul>
     </div>
 </nav>

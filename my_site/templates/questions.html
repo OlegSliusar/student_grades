@@ -1,34 +1,35 @@
-<form role="form" action="/id/" method="post">
-  <div class="tab-content">
-    {% for question in questions %}
-    <div class="tab-pane fade in active" role="tabpanel" id="stepper-step-1">
-      <h3 class="h3">{{question.id}}. {{question.title}}</h3>
-      <p>Do you like to work with?</p>
-      <br>
-        <div class="radio-buttons">
-          <ul class="radio-buttons">
-              <form>
-                <input type="radio" name="choice" value="yes">Yes
-                <input type="radio" name="choice" value="no">No<br>
-              </form>
+{% block content %}
+    <form role="form" action="/id/" method="post">
+      <div class="tab-content">
+        {% for question in questions %}
+        <div class="tab-pane fade in active" role="tabpanel" id="stepper-step-1">
+          <h3 class="h3">{{question.id}}. {{question.title}}</h3>
+          <p>Do you like to work with?</p>
+          <br>
+            <div class="radio-buttons">
+              <ul class="radio-buttons">
+                  <form>
+                    <input type="radio" name="choice" value="yes">Yes
+                    <input type="radio" name="choice" value="no">No<br>
+                  </form>
 
-          </ul>
-        </div>
-        <br>
-      <p>What is your level?</p>
-      <br>
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">None
-          <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-              <li><a href="#">None</a></li>
-              <li><a href="#">Beginner</a></li>
-              <li><a href="#">Good</a></li>
-              <li><a href="#">Strong</a></li>
-          </ul>
-        </div>
+              </ul>
+            </div>
+            <br>
+          <p>What is your level?</p>
+          <br>
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">None
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                  {% for grade in grades %}
+                    <li><a href="#">{{ grade }}</a></li>
+                  {% endfor %}
+              </ul>
+            </div>
 
-    </div>
-    {% endfor %}
-  </div>
-</form>
+        </div>
+        {% endfor %}
+      </div>
+    </form>
+{% endblock content %}

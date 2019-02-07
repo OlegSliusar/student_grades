@@ -18,6 +18,12 @@
 
 <body>
     {% include 'header.html' %}
-    {% include 'stages.html' %}
+
+    {% if user.is_authenticated %}
+        {% include 'stages.html' %}
+    {% else %}
+        {% include 'hello.html' %}
+    {% endif %}
+
     {% include 'footer.html' %}
 </body>

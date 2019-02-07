@@ -26,7 +26,7 @@
     {% include 'questions.html' %}
       <ul class="list-inline pull-right">
         <li>
-            <a href="{% url 'stage_page' id_stg=next_stage.id %}"><button type="button" class="btn btn-secondary">Skip</button></a>
+          <a href="{% url 'stage_page' id_stg=prev_stage.id %}"><button type="button" class="btn btn-primary">Previous</button></a>
         </li>
         <li>
           <a href="{% url 'stage_page' id_stg=next_stage.id %}" class="btn btn-primary next-step">Next</a>

@@ -5,9 +5,9 @@ from allactions.models import *
 
 
 @login_required(login_url='')
-def base(request, id_stg=1):
+def base(request, sec=1, id_stg=1):
         sections = Section.objects.all()
-        stages = Stage.objects.all()
+        stages = Stage.objects.filter(fSection=sec)
         stage_sk = Stage.objects.all().filter(fSection=1).first()
         stage_act = Stage.objects.all().filter(fSection=2).first()
         stage = Stage.objects.get(pk=id_stg)
@@ -28,7 +28,7 @@ def base(request, id_stg=1):
 
         # A HTTP POST?
         if request.method == 'POST':
-                print("Hello bitch")
+                print("Hello user")
                 # form = AnswerForm(request.POST)
 
                 # Have we been provided with a valid form?

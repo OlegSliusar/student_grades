@@ -5,13 +5,13 @@
      </div>
         {% if user.is_authenticated %}
       <ul class="nav navbar-nav">
-          {% if stage.fSection_id == 1 %}
-            <li class="active"><a href="#">Activities</a></li>
-            <li><a href="{% url 'stage_page' id_stg=stage_act.id %}">Skills</a></li>
-          {% elif stage.fSection_id == 2 %}
-            <li><a href="{% url 'stage_page' id_stg=stage_sk.id %}">Activities</a></li>
-            <li class="active"><a href="#">Skills</a></li>
-          {% endif %}
+          {% for section in sections %}
+              {% if stage.fSection_id == section.id %}
+                <li class="active"><a href="#">{{ section.name }}</a></li>
+              {% else %}
+                <li><a href="{% url 'stage_page' sec=section.id, id_stg=stage.id %}">{{ section.name }}</a></li>
+              {% endif %}
+          {% endfor %}
       </ul>
 
         {% endif %}

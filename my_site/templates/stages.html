@@ -6,33 +6,38 @@
         <ul class="nav nav-tabs" role="tablist">
             {% for stage_li in stages %}
 
-              {% if stage_li == stage %}
-                <li role="presentation" class="active">
-                  {% else %}
-                <li role="presentation" class="disabled">
+              {% if stage_li.fSection_id == section_id %}
+
+                {% if stage_li == stage %}
+                  <li role="presentation" class="active">
+                    {% else %}
+                  <li role="presentation" class="disabled">
+                {% endif %}
+
+                  <a href="{% url 'stage_page' id_stg=stage_li.id %}" data-toggle="tab" aria-controls="stepper-step-1" role="tab" title="{{ stage_li.title }}">
+
+
+                    <span class="round-tab">{{ stage_li.title }}</span>
+
+                  </a>
+                </li>
               {% endif %}
-
-                <a href="{% url 'stage_page' id_stg=stage_li.id %}" data-toggle="tab" aria-controls="stepper-step-1" role="tab" title="{{ stage_li.title }}">
-
-
-                  <span class="round-tab">{{ stage_li.title }}</span>
-
-                </a>
-              </li>
             {% endfor %}
         </ul>
       </div>
-
-    {% include 'questions.html' %}
-      <ul class="list-inline pull-right">
-        <li>
-          <a href="{% url 'stage_page' id_stg=prev_stage.id %}"><button type="button" class="btn btn-primary">Previous</button></a>
-        </li>
-        <li>
-          <a href="{% url 'stage_page' id_stg=next_stage.id %}" class="btn btn-primary next-step">Next</a>
-        </li>
-
-      </ul>
+    {% block content %}
+      <form role="form" action="" method="post">
+        {% include 'questions.html' %}
+          <ul class="list-inline pull-right">
+            <li>
+              <a href="{% url 'stage_page' id_stg=prev_stage.id %}"><button type="button" class="btn btn-primary">Previous</button></a>
+            </li>
+            <li>
+              <a href="{% url 'stage_page' id_stg=next_stage.id %}"><input type="submit" value="Next" class="btn btn-primary"></input></a>
+            </li>
+        </ul>
+      </form>
+      {% endblock %}
     </div>
   </div>
 </div>

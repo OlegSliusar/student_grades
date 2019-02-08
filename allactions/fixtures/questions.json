@@ -198,5 +198,45 @@
     "hint": "Version Control Systems understanding: Git, Perforce, SVN, CVS, Mercurial etc.",
     "department": []
   }
+},
+{
+  "model": "allactions.question",
+  "pk": 21,
+  "fields": {
+    "title": "Python",
+    "fStage": 8,
+    "hint": null,
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 22,
+  "fields": {
+    "title": "jQuery",
+    "fStage": 9,
+    "hint": null,
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 23,
+  "fields": {
+    "title": "Apache",
+    "fStage": 10,
+    "hint": null,
+    "department": []
+  }
+},
+{
+  "model": "allactions.question",
+  "pk": 24,
+  "fields": {
+    "title": "Agile",
+    "fStage": 11,
+    "hint": null,
+    "department": []
+  }
 }
 ]

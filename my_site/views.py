@@ -8,9 +8,10 @@ from allactions.models import *
 def base(request, id_stg=1):
         sections = Section.objects.all()
         stages = Stage.objects.all()
-        stage_sk = Stage.objects.filter(fSection=1).first()
-        stage_act = Stage.objects.filter(fSection=2).first()
+        stage_sk = Stage.objects.all().filter(fSection=1).first()
+        stage_act = Stage.objects.all().filter(fSection=2).first()
         stage = Stage.objects.get(pk=id_stg)
+        section_id = stage.fSection.id
         questions = Question.objects.filter(fStage_id=stage.id)
         all_questions = Question.objects.all()
 
@@ -23,6 +24,32 @@ def base(request, id_stg=1):
 
         context = {'stages': stages, 'questions': questions, 'sections': sections, 'stage': stage,
                    'all_questions': all_questions, 'next_stage': next_stage, 'prev_stage': prev_stage,
-                   'stage_sk': stage_sk, 'stage_act': stage_act}
-        return render(request, 'base.html', context=context)
+                   'stage_sk': stage_sk, 'stage_act': stage_act, 'section_id': section_id}
 
+        # A HTTP POST?
+        if request.method == 'POST':
+                print("Hello bitch")
+                # form = AnswerForm(request.POST)
+
+                # Have we been provided with a valid form?
+                # if form.is_valid():
+                        # Save the new category to the database.
+                        # answer = form.save(commit=False)
+                        # answer.fUser = request.user.id
+                        # answer.answer_like = request.radio.id
+                        # answer.fQuestion = question.id
+                        # answer.fGrade = request.grade.id
+                        # answer.save()
+
+                        # Redirect to home (/)
+                        # return redirect('/')
+                # else:
+                        # The supplied form contained errors - just print them to the terminal.
+                        # print
+                        # form.errors
+        # else:
+                # If the request was not a POST, display the form to enter details.
+                # form = AnswerForm()
+
+
+        return render(request, 'base.html', context=context)

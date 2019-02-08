@@ -7,9 +7,9 @@
       <ul class="nav navbar-nav">
           {% if stage.fSection_id == 1 %}
             <li class="active"><a href="#">Activities</a></li>
-            <li><a href="{% url 'stage_page' id_stg=stage_sk.id %}">Skills</a></li>
+            <li><a href="{% url 'stage_page' id_stg=stage_act.id %}">Skills</a></li>
           {% elif stage.fSection_id == 2 %}
-            <li><a href="{% url 'stage_page' id_stg=stage_act.id %}">Activities</a></li>
+            <li><a href="{% url 'stage_page' id_stg=stage_sk.id %}">Activities</a></li>
             <li class="active"><a href="#">Skills</a></li>
           {% endif %}
       </ul>

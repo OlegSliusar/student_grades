@@ -1,35 +1,33 @@
-{% block content %}
-    <form role="form" action="/id/" method="post">
-      <div class="tab-content">
-        {% for question in questions %}
-        <div class="tab-pane fade in active" role="tabpanel" id="stepper-step-1">
-          <h3 class="h3">{{question.id}}. {{question.title}}</h3>
-          <p>Do you like to work with?</p>
-          <br>
-            <div class="radio-buttons">
-              <ul class="radio-buttons">
-                  <form>
-                    <input type="radio" name="choice" value="yes">Yes
-                    <input type="radio" name="choice" value="no">No<br>
-                  </form>
+<form role="form" action="" method="post">
+  <div class="tab-content">
+    {% csrf_token %}
 
-              </ul>
-            </div>
-            <br>
-          <p>What is your level?</p>
-          <br>
-            <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">None
-              <span class="caret"></span></button>
-              <ul class="dropdown-menu">
-                  {% for grade in grades %}
-                    <li><a href="#">{{ grade }}</a></li>
-                  {% endfor %}
-              </ul>
-            </div>
+    {% for question in questions %}
+    <div class="tab-pane fade in active" role="tabpanel" id="stepper-step-1">
+      <h3 class="h3">{{question.id}}. {{question.title}}</h3>
+      <p>Do you like to work with?</p>
+      <br>
+        <div class="radio-buttons">
+          <ul class="radio-buttons">
+              <form>
+                <input type="radio" name="choice" value="1">Yes
+                <input type="radio" name="choice" value="2">No
+                <br>
+              </form>
 
+          </ul>
         </div>
-        {% endfor %}
-      </div>
-    </form>
-{% endblock content %}
+        <br>
+      <p>What is your level?</p>
+      <br>
+      <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>
+         <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+             <option value="1"selected>None...</option>
+             <option value="2">Beginner</option>
+             <option value="3">Good</option>
+             <option value="4">Strong</option>
+         </select>
+    </div>
+    {% endfor %}
+  </div>
+</form>

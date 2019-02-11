@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 
 class Answer(models.Model):
     class Meta:
@@ -10,6 +10,9 @@ class Answer(models.Model):
     fQuestion = models.ForeignKey("allactions.Question", default=None, on_delete=models.DO_NOTHING)
     answer_like = models.BooleanField()
     fGrade = models.ForeignKey('allactions.Grade', default=None, on_delete=models.DO_NOTHING)
+
+    def get_absolute_url(self):
+        return reverse('answer:edit', kwargs={'pk': self.pk})
 
 class Review(models.Model):
     class Meta:

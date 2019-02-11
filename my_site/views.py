@@ -1,3 +1,4 @@
+from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 
@@ -5,26 +6,23 @@ from allactions.models import *
 
 
 @login_required(login_url='')
-def base(request, sec=1, id_stg=1):
+def base(request, id_sec=1, id_stg=1):
         sections = Section.objects.all()
-        stages = Stage.objects.filter(fSection=sec)
-        stage_sk = Stage.objects.all().filter(fSection=1).first()
-        stage_act = Stage.objects.all().filter(fSection=2).first()
         stage = Stage.objects.get(pk=id_stg)
-        section_id = stage.fSection.id
+        section = Section.objects.get(pk=id_sec)
+        stages_in_sec = Stage.objects.filter(fSection=section.id)
         questions = Question.objects.filter(fStage_id=stage.id)
         all_questions = Question.objects.all()
-
-        if(id_stg>1 and id_stg<len(stages)):
+        if(id_stg>1 and id_stg<len(stages_in_sec)):
                 next_stage = Stage.objects.get(pk=id_stg+1)
                 prev_stage = Stage.objects.get(pk=id_stg-1)
         else:
                 next_stage = Stage.objects.get(pk=2)
                 prev_stage = Stage.objects.get(pk=1)
 
-        context = {'stages': stages, 'questions': questions, 'sections': sections, 'stage': stage,
+        context = {'stages_in_sec': stages_in_sec, 'questions': questions, 'sections': sections, 'stage': stage,
                    'all_questions': all_questions, 'next_stage': next_stage, 'prev_stage': prev_stage,
-                   'stage_sk': stage_sk, 'stage_act': stage_act, 'section_id': section_id}
+                   'section': section}
 
         # A HTTP POST?
         if request.method == 'POST':

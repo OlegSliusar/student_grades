@@ -4,15 +4,15 @@
        <a class="navbar-brand" href="#">Demo SoftServe</a>
      </div>
         {% if user.is_authenticated %}
-      <ul class="nav navbar-nav">
-          {% for section in sections %}
-              {% if stage.fSection_id == section.id %}
-                <li class="active"><a href="#">{{ section.name }}</a></li>
-              {% else %}
-                <li><a href="{% url 'stage_page' sec=section.id, id_stg=stage.id %}">{{ section.name }}</a></li>
-              {% endif %}
-          {% endfor %}
-      </ul>
+          <ul class="nav navbar-nav">
+              {% for section_to_show in sections %}
+                  {% if section == section_to_show.id %}
+                    <li class="active"><a href="">{{ section_to_show.name }}</a></li>
+                  {% else %}
+                    <li><a href="{% url 'stage_page' section_to_show.id stages_in_sec.first.id %}">{{ section_to_show.name }}</a></li>
+                  {% endif %}
+              {% endfor %}
+          </ul>
 
         {% endif %}
       <ul class="nav navbar-nav navbar-right">

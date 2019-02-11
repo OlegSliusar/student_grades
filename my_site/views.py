@@ -38,8 +38,8 @@ def base(request, id_sec=1, id_stg=1):
                 answer.fGrade = grade
                 answer.save()
 
-                # Redirect to home (/)
-                return redirect('/')
+
+                return redirect('/section/{}/stage/{}'.format(id_sec, id_stg+1))
 
 
         return render(request, 'base.html', context=context)

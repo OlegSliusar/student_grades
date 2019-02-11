@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 
 from allactions.models import *
 from answers.models import Answer
-from users.models import User
+
 
 
 @login_required(login_url='')
@@ -29,19 +29,12 @@ def base(request, id_sec=1, id_stg=1):
 
         # A HTTP POST?
         if request.method == 'POST':
-                print("Hello user")
                 answer = Answer()
-                answer.fUser = User.objects.get(pk=1)
+                answer.fUser = request.user
                 answer.answer_like = request.POST.get('choice')
                 answer.fQuestion_id = request.POST.get('question')
                 grade = request.POST.getlist('grade')
-                print(str(grade[0]))
-                grade_list = []
-                # for grade in grades:
-                #         grade_list.append(Grade.objects.get(name=grade))
-                print(grade)
                 grade = Grade.objects.get(name=grade[0])
-                print(grade)
                 answer.fGrade = grade
                 answer.save()
 

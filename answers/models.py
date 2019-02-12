@@ -10,7 +10,7 @@ class Answer(models.Model):
     fUser = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
 
     fQuestion = models.ForeignKey("allactions.Question", default=None, on_delete=models.DO_NOTHING)
-    answer_like = models.BooleanField()
+    answer_like = models.BooleanField(null=True)
     fGrade = models.ForeignKey('allactions.Grade', default=None, on_delete=models.DO_NOTHING)
 
     def get_absolute_url(self):
